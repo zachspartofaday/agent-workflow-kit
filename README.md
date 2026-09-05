@@ -41,6 +41,6 @@ Nine standalone skills, adaptable templates, fictional examples, a rule-to-mecha
 
 Created by Zach Skjaveland, informed by his Limitless engineering workflow. This is newly authored guidance, not an export of the private runtime or its exact skills. The modular architecture taught here is a design pattern for readers, not a claim that the private runtime is already host-independent. A substantial Pi extension can have deep lifecycle, persistence, worker and UI coupling even when some policy logic is modular.
 
-Research influences, including NVIDIA AVO, are credited in [Sources](docs/SOURCES.md). No affiliation, endorsement or benchmark equivalence is implied.
+Research influences, including NVIDIA AVO and GPT-Erdos, are credited in [Sources](docs/SOURCES.md). No affiliation, endorsement or benchmark equivalence is implied.
 
 Original code, documentation and artwork use the [MIT license](LICENSE).
