@@ -6,14 +6,14 @@ A practical blueprint for turning an engineering process into an agent workflow:
 
 ![Operator intent and repository knowledge feed an agent loop; validation and review return evidence; a runtime maintains state and stops at decisions.](assets/diagrams/workflow-overview.png)
 
-## Choose a starting point
+## Where to start
 
 | You want to… | Start here |
 | --- | --- |
 | Understand how the pieces fit | [Workflow handbook](docs/WORKFLOW.md) |
-| Understand the agent roles and handoffs | [Role guide and map](docs/AGENT_ROLES.md) |
+| Understand the agent roles and handoffs | [Role and routing guide](docs/AGENT_ROLES.md) |
 | Have an agent adapt your repository | [Adoption guide and prompt](docs/ADOPTION.md) |
-| Identify the runtime components to build | [Component blueprint and connections](docs/RUNTIME_COMPONENTS.md) |
+| Identify the runtime components to build | [Runtime component blueprint](docs/RUNTIME_COMPONENTS.md) |
 | Build your own Pi workflow extension | [Architecture and build path](docs/EXTENSION_FRAMEWORK.md) |
 | Try a small working example | [Pi teaching extension](examples/pi-workflow/README.md) |
 | Use one portable skill | [Skill catalog](skills/README.md) |
