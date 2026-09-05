@@ -66,23 +66,54 @@ flowchart LR
   Verify -->|repeat adoption| Mapping
 ```
 
-## Optional coordination
+## Role map
 
-[SVG](../assets/diagrams/coordination.svg) · [PNG](../assets/diagrams/coordination.png)
+[SVG](../assets/diagrams/agent-roles.svg) · [PNG](../assets/diagrams/agent-roles.png) · [Role guide](AGENT_ROLES.md)
 
-![A coordinator assigns independent work and integrates concise evidence from isolated writers and reviewers.](../assets/diagrams/coordination.png)
+![Operator, coordinator and runtime controls; eight specialist worker roles and separate formal review.](../assets/diagrams/agent-roles.png)
 
-Workers receive bounded assignments. Reviewers inspect actual source. Integration checks the combined outcome and dependent consumers; it is not simply a collection of green worker reports.
+This is a responsibility map, not an instruction to run every role. The operator decides, the coordinator routes, and runtime code enforces the selected workflow. The eight worker roles have different inputs, permissions and outputs.
 
 ```mermaid
 flowchart TB
-  Coordinator[Plan and dependency state] --> A[Writer A: assigned workspace]
-  Coordinator --> B[Writer B: assigned workspace]
-  Coordinator --> Reviewer[Reviewer: actual candidate source]
-  A --> Integration[Combined acceptance and consumer evidence]
-  B --> Integration
-  Reviewer --> Integration
-  Integration -->|unresolved outcome| Coordinator
+  Operator[Operator: goals and decisions] --> Coordinator[Coordinator: bounded assignments]
+  Coordinator --> Evidence[Evidence and judgment]
+  Evidence --- Collector[Collector]
+  Evidence --- Auditor[Audit lead]
+  Evidence --- Judge[Decision judge]
+  Evidence --- Refuter[Independent refuter]
+  Coordinator --> Writing[Assigned writing]
+  Writing --- Mechanical[Mechanical writer]
+  Writing --- Docs[Documentation writer]
+  Writing --- Implement[Implementation owner]
+  Coordinator --> Supervisor[Trajectory supervisor: alternatives]
+  Supervisor -->|directions, not a selection| Operator
+  Runtime[Runtime code: permissions, state, execution] -. enforces selected routes .-> Coordinator
+```
+
+## Role handoffs
+
+[SVG](../assets/diagrams/coordination.svg) · [PNG](../assets/diagrams/coordination.png)
+
+![Evidence, judgment and decided application followed by validation and formal review; separate conditional refutation and trajectory routes.](../assets/diagrams/coordination.png)
+
+The main row shows a selected decision/application route. Its arrows carry reports, decisions, candidates and results; actual dispatch remains runtime-mediated under coordinator/operator authority. The other rows show conditional alternatives, not automatic extra stages.
+
+```mermaid
+flowchart LR
+  Collect[Collectors] -->|evidence| Judge[Judge]
+  Judge -->|ready decision within authority| Mechanical[Mechanical writer]
+  Mechanical -->|candidate| Validate[Validation]
+  Validate -->|passing candidate| Review[Formal review]
+  Review -->|findings| Judge
+  Validate -->|failure requiring diagnosis| Judge
+  Claim[Claim and source] --> Refuter[Independent refuter]
+  Refuter -->|targeted question when permitted| Child[Read-only collector]
+  Child -->|evidence| Refuter
+  Refuter --> Verdict[Survives, refuted or unresolved]
+  History[Attempt history] --> Supervisor[Trajectory supervisor]
+  Supervisor -->|candidate directions| Operator[Operator selects]
+  Operator --> Coordinator[Coordinator routes the selected next step]
 ```
 
 ## Rule to mechanism

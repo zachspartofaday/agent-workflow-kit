@@ -53,6 +53,8 @@ A blocker report names what failed, what remains usable, the event or action tha
 
 ## Several workers or repositories
 
+Use the [role guide](AGENT_ROLES.md) to distinguish evidence collection, audit, judgment, independent refutation, decided writing, inseparable implementation and trajectory review. These are selected responsibilities, not interchangeable workers.
+
 Delegate concrete independent work when useful and allowed. Freeze inputs, source revision, paths, exclusions and expected output. Workers cannot expand authority by rewriting their assignment.
 
 Use one writer per workspace. Coordinators integrate concise evidence and resolve dependencies; they do not need every transcript. Reviewers inspect load-bearing source rather than accepting another worker's conclusions as proof.

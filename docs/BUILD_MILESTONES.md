@@ -16,6 +16,8 @@ Each slice needs observable behavior, failure tests and a disable path. Finish i
 
 ## Worker lifecycle
 
+Choose supported responsibilities using the [role guide](AGENT_ROLES.md) before adding dispatch. Define the collector, judgment and writing boundaries and select only the routes your workflow needs. Role identity and permission checks accompany workspace and attempt identity.
+
 Distinguish requested, admitted, running, settling and terminal states when processes are introduced. "Done" text does not prove process exit or workspace release. Bind results to unique attempts and reject old-generation delivery.
 
 Assign ownership of cancellation, streams, timeouts and cleanup. Restrict workers through controls appropriate to the host. Do not widen tool permissions when a configured tool is unavailable. Preserve dirty or unmerged work and uncertain processes for explicit disposition.

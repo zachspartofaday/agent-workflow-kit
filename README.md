@@ -11,6 +11,7 @@ A practical blueprint for turning an engineering process into an agent workflow:
 | You want to… | Start here |
 | --- | --- |
 | Understand how the pieces fit | [Workflow handbook](docs/WORKFLOW.md) |
+| Understand the agent roles and handoffs | [Role guide and map](docs/AGENT_ROLES.md) |
 | Have an agent adapt your repository | [Adoption guide and prompt](docs/ADOPTION.md) |
 | Build your own Pi workflow extension | [Architecture and build path](docs/EXTENSION_FRAMEWORK.md) |
 | Try a small working example | [Pi teaching extension](examples/pi-workflow/README.md) |
@@ -18,6 +19,14 @@ A practical blueprint for turning an engineering process into an agent workflow:
 | Explore diagrams and research influences | [Visual guide](docs/VISUALS.md) · [Sources](docs/SOURCES.md) |
 
 The full workflow is explained, but adoption is proportional. A small change may need an issue, a test and a review. A long-running multi-repository change may need explicit dependencies, durable evidence and a controller that remembers what is current.
+
+## Who does the work?
+
+The coordinator routes work among eight specialist roles: **collector, auditor, judge, refuter, mechanical writer, documentation writer, implementation owner, and trajectory supervisor**. The role guide explains when each is used, what it may change, and how decisions move to implementation.
+
+![Eight worker roles, with operator decisions, coordinator routing and runtime enforcement kept distinct.](assets/diagrams/agent-roles.png)
+
+The important handoff is often **evidence → judgment → decided application**, followed by validation and formal review. Difficult inseparable work uses the implementation-owner route. Repeated failure goes to a trajectory supervisor, which proposes directions for the operator to choose. [Read the role and routing guide](docs/AGENT_ROLES.md).
 
 ## Included
 

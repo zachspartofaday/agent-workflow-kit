@@ -46,4 +46,4 @@ for (const svg of files.filter(f => f.endsWith('.svg'))) {
   try { await stat(svg.replace(/\.svg$/, '.png')); } catch { errors.push(`${relative(root,svg)}: missing PNG export`); }
 }
 if (errors.length) { console.error(errors.join('\n')); process.exitCode = 1; }
-else console.log(`Documentation checks passed: ${files.filter(f => f.endsWith('.md')).length} Markdown files, nine standalone skills, local links and five accessible diagram sources.`);
+else console.log(`Documentation checks passed: ${files.filter(f => f.endsWith('.md')).length} Markdown files, nine standalone skills, local links and ${files.filter(f => f.endsWith('.svg')).length} accessible diagram sources.`);

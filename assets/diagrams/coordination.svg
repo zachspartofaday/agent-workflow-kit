@@ -1,51 +1,92 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
-  <title id="title">Coordinate work without collecting every transcript</title>
-  <desc id="desc">Optional advanced design: separate ownership, preserve dependencies, integrate actual evidence.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1100" viewBox="0 0 1440 1100" role="img" aria-labelledby="title desc">
+  <title id="title">How decisions become changes</title>
+  <desc id="desc">Reports, decisions and evidence move between roles; no arrow grants new action authority.</desc>
   <defs>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
       <path d="M0 0 L8 4 L0 8" fill="none" stroke="#007e83" stroke-width="1.5" />
     </marker>
   </defs>
-  <rect width="1440" height="900" fill="#f3f6fb" />
+  <rect width="1440" height="1100" fill="#f3f6fb" />
   <g font-family="Arial, Helvetica, sans-serif">
-    <text x="64" y="66" font-size="38" fill="#172942" font-weight="700">Coordinate work without collecting every transcript</text>
-    <text x="64" y="106" font-size="22" fill="#52627a" font-weight="400">Optional advanced design: separate ownership, preserve dependencies, integrate actual evidence.</text>
-    <rect x="470" y="150" width="500" height="150" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
-    <rect x="470" y="168" width="5" height="114" rx="2" fill="#6554c0" />
-    <text x="494" y="180" font-size="15" fill="#6554c0" font-weight="700">COORDINATION</text>
-    <text x="494" y="214" font-size="25" fill="#172942" font-weight="700">Current plan and dependency state</text>
-    <text x="494" y="248" font-size="20" fill="#52627a" font-weight="400">Bound assignments • concise evidence</text>
-    <rect x="64" y="395" width="416" height="170" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
-    <rect x="64" y="413" width="5" height="134" rx="2" fill="#007e83" />
-    <text x="88" y="425" font-size="15" fill="#007e83" font-weight="700">ISOLATED RESPONSIBILITY</text>
-    <text x="88" y="459" font-size="25" fill="#172942" font-weight="700">Writer A</text>
-    <text x="88" y="493" font-size="20" fill="#52627a" font-weight="400">Assigned source and scope</text>
-    <text x="88" y="522" font-size="20" fill="#52627a" font-weight="400">Current evidence with explicit gaps</text>
-    <rect x="512" y="395" width="416" height="170" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
-    <rect x="512" y="413" width="5" height="134" rx="2" fill="#007e83" />
-    <text x="536" y="425" font-size="15" fill="#007e83" font-weight="700">ISOLATED RESPONSIBILITY</text>
-    <text x="536" y="459" font-size="25" fill="#172942" font-weight="700">Writer B</text>
-    <text x="536" y="493" font-size="20" fill="#52627a" font-weight="400">Assigned source and scope</text>
-    <text x="536" y="522" font-size="20" fill="#52627a" font-weight="400">Current evidence with explicit gaps</text>
-    <rect x="960" y="395" width="416" height="170" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
-    <rect x="960" y="413" width="5" height="134" rx="2" fill="#007e83" />
-    <text x="984" y="425" font-size="15" fill="#007e83" font-weight="700">ISOLATED RESPONSIBILITY</text>
-    <text x="984" y="459" font-size="25" fill="#172942" font-weight="700">Reviewer</text>
-    <text x="984" y="493" font-size="20" fill="#52627a" font-weight="400">Assigned source and scope</text>
-    <text x="984" y="522" font-size="20" fill="#52627a" font-weight="400">Current evidence with explicit gaps</text>
-    <polyline points="580,300 580,340 272,340 272,385" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
-    <polyline points="720,300 720,385" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
-    <polyline points="860,300 860,340 1168,340 1168,385" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
-    <polyline points="272,565 272,620 500,620 500,655" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
-    <polyline points="720,565 720,655" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
-    <polyline points="1168,565 1168,620 940,620 940,655" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
-    <rect x="320" y="665" width="800" height="155" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
-    <rect x="320" y="683" width="5" height="119" rx="2" fill="#007e83" />
-    <text x="344" y="695" font-size="15" fill="#007e83" font-weight="700">INTEGRATION</text>
-    <text x="344" y="729" font-size="25" fill="#172942" font-weight="700">Accept the combined outcome</text>
-    <text x="344" y="763" font-size="20" fill="#52627a" font-weight="400">Prerequisites settled • consumers checked • unresolved work stays visible</text>
-    <text x="64" y="326" font-size="20" fill="#007e83" font-weight="700">One writer per workspace</text>
-    <text x="978" y="326" font-size="20" fill="#007e83" font-weight="700">Independent source inspection</text>
-    <text x="64" y="872" font-size="14" fill="#52627a" font-weight="400">AGENT WORKFLOW KIT  /  Original teaching diagrams  /  MIT</text>
+    <text x="64" y="66" font-size="38" fill="#172942" font-weight="700">How decisions become changes</text>
+    <text x="64" y="106" font-size="22" fill="#52627a" font-weight="400">Reports, decisions and evidence move between roles; no arrow grants new action authority.</text>
+    <text x="64" y="156" font-size="21" fill="#007e83" font-weight="700">DECIDE → APPLY  /  One selected route; dispatch remains runtime-mediated</text>
+    <rect x="64" y="186" width="224" height="145" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="64" y="204" width="5" height="109" rx="2" fill="#007e83" />
+    <text x="88" y="216" font-size="15" fill="#007e83" font-weight="700">EVIDENCE</text>
+    <text x="88" y="251" font-size="24" fill="#172942" font-weight="700">Collectors</text>
+    <text x="88" y="285" font-size="18" fill="#52627a" font-weight="400">facts and gaps</text>
+    <text x="88" y="314" font-size="18" fill="#52627a" font-weight="400">source anchors</text>
+    <polyline points="288,258 326,258" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
+    <rect x="336" y="186" width="224" height="145" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="336" y="204" width="5" height="109" rx="2" fill="#007e83" />
+    <text x="360" y="216" font-size="15" fill="#007e83" font-weight="700">JUDGMENT</text>
+    <text x="360" y="251" font-size="24" fill="#172942" font-weight="700">Judge</text>
+    <text x="360" y="285" font-size="18" fill="#52627a" font-weight="400">check evidence</text>
+    <text x="360" y="314" font-size="18" fill="#52627a" font-weight="400">freeze a disposition</text>
+    <polyline points="560,258 598,258" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
+    <rect x="608" y="186" width="224" height="145" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="608" y="204" width="5" height="109" rx="2" fill="#007e83" />
+    <text x="632" y="216" font-size="15" fill="#007e83" font-weight="700">WRITING</text>
+    <text x="632" y="251" font-size="24" fill="#172942" font-weight="700">Mechanical</text>
+    <text x="632" y="285" font-size="18" fill="#52627a" font-weight="400">apply fixed shape</text>
+    <text x="632" y="314" font-size="18" fill="#52627a" font-weight="400">report mismatches</text>
+    <polyline points="832,258 870,258" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
+    <rect x="880" y="186" width="224" height="145" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="880" y="204" width="5" height="109" rx="2" fill="#007e83" />
+    <text x="904" y="216" font-size="15" fill="#007e83" font-weight="700">EXECUTION</text>
+    <text x="904" y="251" font-size="24" fill="#172942" font-weight="700">Validation</text>
+    <text x="904" y="285" font-size="18" fill="#52627a" font-weight="400">run actual checks</text>
+    <text x="904" y="314" font-size="18" fill="#52627a" font-weight="400">bind the result</text>
+    <polyline points="1104,258 1142,258" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
+    <rect x="1152" y="186" width="224" height="145" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="1152" y="204" width="5" height="109" rx="2" fill="#007e83" />
+    <text x="1176" y="216" font-size="15" fill="#007e83" font-weight="700">ASSESSMENT</text>
+    <text x="1176" y="251" font-size="24" fill="#172942" font-weight="700">Formal review</text>
+    <text x="1176" y="285" font-size="18" fill="#52627a" font-weight="400">assess current head</text>
+    <text x="1176" y="314" font-size="18" fill="#52627a" font-weight="400">findings or clean</text>
+    <polyline points="1264,331 1264,378 448,378 448,342" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
+    <polyline points="992,331 992,378" fill="none" stroke="#007e83" stroke-width="3" />
+    <text x="590" y="412" font-size="21" fill="#007e83" font-weight="700">Failures or findings that require another decision</text>
+    <text x="64" y="474" font-size="21" fill="#6554c0" font-weight="700">CONDITIONAL CHECK  /  Independent of constructing or judging the claim</text>
+    <rect x="64" y="498" width="416" height="142" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="64" y="516" width="5" height="106" rx="2" fill="#6554c0" />
+    <text x="88" y="528" font-size="15" fill="#6554c0" font-weight="700">INPUT</text>
+    <text x="88" y="563" font-size="24" fill="#172942" font-weight="700">Claim + source</text>
+    <text x="88" y="597" font-size="20" fill="#52627a" font-weight="400">candidate and assumptions</text>
+    <rect x="512" y="498" width="416" height="142" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="512" y="516" width="5" height="106" rx="2" fill="#6554c0" />
+    <text x="536" y="528" font-size="15" fill="#6554c0" font-weight="700">READ-ONLY</text>
+    <text x="536" y="563" font-size="24" fill="#172942" font-weight="700">Refuter</text>
+    <text x="536" y="597" font-size="20" fill="#52627a" font-weight="400">counterexamples + reachability</text>
+    <rect x="960" y="498" width="416" height="142" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="960" y="516" width="5" height="106" rx="2" fill="#6554c0" />
+    <text x="984" y="528" font-size="15" fill="#6554c0" font-weight="700">OUTPUT</text>
+    <text x="984" y="563" font-size="24" fill="#172942" font-weight="700">Verdict</text>
+    <text x="984" y="597" font-size="20" fill="#52627a" font-weight="400">survives • refuted • unresolved</text>
+    <polyline points="480,570 502,570" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
+    <polyline points="928,570 950,570" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
+    <text x="64" y="700" font-size="21" fill="#6554c0" font-weight="700">STRATEGY CHECKPOINT  /  Used when the trajectory warrants intervention</text>
+    <rect x="64" y="724" width="416" height="142" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="64" y="742" width="5" height="106" rx="2" fill="#6554c0" />
+    <text x="88" y="754" font-size="15" fill="#6554c0" font-weight="700">INPUT</text>
+    <text x="88" y="789" font-size="24" fill="#172942" font-weight="700">Attempt history</text>
+    <text x="88" y="823" font-size="20" fill="#52627a" font-weight="400">changes, checks and recurrence</text>
+    <rect x="512" y="724" width="416" height="142" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="512" y="742" width="5" height="106" rx="2" fill="#6554c0" />
+    <text x="536" y="754" font-size="15" fill="#6554c0" font-weight="700">READ-ONLY</text>
+    <text x="536" y="789" font-size="24" fill="#172942" font-weight="700">Trajectory supervisor</text>
+    <text x="536" y="823" font-size="20" fill="#52627a" font-weight="400">proposes fresh directions</text>
+    <rect x="960" y="724" width="416" height="142" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="960" y="742" width="5" height="106" rx="2" fill="#6554c0" />
+    <text x="984" y="754" font-size="15" fill="#6554c0" font-weight="700">HUMAN DECISION</text>
+    <text x="984" y="789" font-size="24" fill="#172942" font-weight="700">Operator</text>
+    <text x="984" y="823" font-size="20" fill="#52627a" font-weight="400">selects a direction for routing</text>
+    <polyline points="480,796 502,796" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
+    <polyline points="928,796 950,796" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
+    <rect x="64" y="924" width="1312" height="115" rx="18" fill="#e9e5f8" />
+    <text x="88" y="963" font-size="24" fill="#6554c0" font-weight="700">Other selected routes</text>
+    <text x="88" y="997" font-size="20" fill="#52627a" font-weight="400">Audit lead + collectors → findings   •   Docs writer → accepted wording   •   Implementation owner → inseparable change</text>
+    <text x="64" y="1072" font-size="14" fill="#52627a" font-weight="400">AGENT WORKFLOW KIT  /  Generalized roles and handoffs  /  MIT</text>
   </g>
 </svg>

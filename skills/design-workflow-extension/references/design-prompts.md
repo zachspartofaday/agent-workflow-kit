@@ -2,6 +2,9 @@
 
 For each mechanism, settle these questions from source and accepted intent; ask only about choices that cannot be discovered.
 
+- Which responsibilities need distinct roles: collection, audit, judgment, independent refutation, mechanical or documentation writing, inseparable implementation, and trajectory review? Keep coordinator routing and operator decisions separate.
+- Can judgment be frozen before a writer applies it, or must reasoning and implementation stay together? What happens when a mechanical assignment encounters a new design choice?
+- Which roles may request bounded read-only collectors? Do not infer permission to spawn writers or unrestricted descendants.
 - What state changes action eligibility? Who may create each transition?
 - What exactly does an operator decision authorize, and how does a model proposal differ?
 - Which root, candidate, dirty inputs and execution attempt bind a result?

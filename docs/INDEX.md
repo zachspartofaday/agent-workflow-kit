@@ -1,6 +1,7 @@
 # Documentation map
 
 - [Workflow](WORKFLOW.md): engineering loop, evidence and proportionality.
+- [Agent roles](AGENT_ROLES.md): responsibilities, permissions, delegation and handoffs.
 - [Adoption](ADOPTION.md): map this workflow onto an existing repository.
 - [Extension framework](EXTENSION_FRAMEWORK.md): why and how to automate.
 - [Contracts](CONTRACTS.md): records, ownership and freshness.

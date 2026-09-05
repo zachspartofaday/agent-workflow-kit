@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1220" viewBox="0 0 1440 1220" role="img" aria-labelledby="title desc">
+  <title id="title">Who gathers, decides, writes and challenges?</title>
+  <desc id="desc">Eight specialist worker roles, with operator decisions and runtime controls kept distinct.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0 0 L8 4 L0 8" fill="none" stroke="#007e83" stroke-width="1.5" />
+    </marker>
+  </defs>
+  <rect width="1440" height="1220" fill="#f3f6fb" />
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="64" y="66" font-size="38" fill="#172942" font-weight="700">Who gathers, decides, writes and challenges?</text>
+    <text x="64" y="106" font-size="22" fill="#52627a" font-weight="400">Eight specialist worker roles, with operator decisions and runtime controls kept distinct.</text>
+    <rect x="64" y="155" width="416" height="160" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="64" y="173" width="5" height="124" rx="2" fill="#6554c0" />
+    <text x="88" y="185" font-size="15" fill="#6554c0" font-weight="700">HUMAN AUTHORITY</text>
+    <text x="88" y="220" font-size="25" fill="#172942" font-weight="700">Operator</text>
+    <text x="88" y="254" font-size="20" fill="#52627a" font-weight="400">Sets goals and approves scope</text>
+    <text x="88" y="283" font-size="20" fill="#52627a" font-weight="400">Chooses a new strategy</text>
+    <rect x="512" y="155" width="416" height="160" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="512" y="173" width="5" height="124" rx="2" fill="#6554c0" />
+    <text x="536" y="185" font-size="15" fill="#6554c0" font-weight="700">MAIN AGENT SESSION</text>
+    <text x="536" y="220" font-size="25" fill="#172942" font-weight="700">Coordinator</text>
+    <text x="536" y="254" font-size="20" fill="#52627a" font-weight="400">Routes bounded assignments</text>
+    <text x="536" y="283" font-size="20" fill="#52627a" font-weight="400">Integrates evidence and blockers</text>
+    <rect x="960" y="155" width="416" height="160" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="960" y="173" width="5" height="124" rx="2" fill="#9a5e0c" />
+    <text x="984" y="185" font-size="15" fill="#9a5e0c" font-weight="700">CODE, NOT AN AGENT ROLE</text>
+    <text x="984" y="220" font-size="25" fill="#172942" font-weight="700">Runtime controllers</text>
+    <text x="984" y="254" font-size="20" fill="#52627a" font-weight="400">Enforce permissions and identity</text>
+    <text x="984" y="283" font-size="20" fill="#52627a" font-weight="400">Own dispatch, state and waiting</text>
+    <text x="64" y="366" font-size="22" fill="#007e83" font-weight="700">EVIDENCE AND JUDGMENT  /  Read-only worker roles</text>
+    <rect x="64" y="393" width="304" height="177" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="64" y="411" width="5" height="141" rx="2" fill="#007e83" />
+    <text x="88" y="423" font-size="15" fill="#007e83" font-weight="700">collect</text>
+    <text x="88" y="458" font-size="23" fill="#172942" font-weight="700">Evidence collector</text>
+    <text x="88" y="492" font-size="19" fill="#52627a" font-weight="400">Find facts at a revision</text>
+    <text x="88" y="521" font-size="19" fill="#52627a" font-weight="400">Report anchors and gaps</text>
+    <rect x="400" y="393" width="304" height="177" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="400" y="411" width="5" height="141" rx="2" fill="#007e83" />
+    <text x="424" y="423" font-size="15" fill="#007e83" font-weight="700">auditor</text>
+    <text x="424" y="458" font-size="23" fill="#172942" font-weight="700">Audit lead</text>
+    <text x="424" y="492" font-size="19" fill="#52627a" font-weight="400">Prioritize scoped risks</text>
+    <text x="424" y="521" font-size="19" fill="#52627a" font-weight="400">Request missing evidence</text>
+    <rect x="736" y="393" width="304" height="177" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="736" y="411" width="5" height="141" rx="2" fill="#007e83" />
+    <text x="760" y="423" font-size="15" fill="#007e83" font-weight="700">judge</text>
+    <text x="760" y="458" font-size="23" fill="#172942" font-weight="700">Decision judge</text>
+    <text x="760" y="492" font-size="19" fill="#52627a" font-weight="400">Check the evidence</text>
+    <text x="760" y="521" font-size="19" fill="#52627a" font-weight="400">Decide a bounded change</text>
+    <rect x="1072" y="393" width="304" height="177" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="1072" y="411" width="5" height="141" rx="2" fill="#007e83" />
+    <text x="1096" y="423" font-size="15" fill="#007e83" font-weight="700">refuter</text>
+    <text x="1096" y="458" font-size="23" fill="#172942" font-weight="700">Independent refuter</text>
+    <text x="1096" y="492" font-size="19" fill="#52627a" font-weight="400">Challenge the claim</text>
+    <text x="1096" y="521" font-size="19" fill="#52627a" font-weight="400">Seek counterexamples</text>
+    <text x="64" y="625" font-size="22" fill="#007e83" font-weight="700">WRITING  /  Only inside an assigned scope</text>
+    <rect x="64" y="652" width="416" height="180" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="64" y="670" width="5" height="144" rx="2" fill="#007e83" />
+    <text x="88" y="682" font-size="15" fill="#007e83" font-weight="700">mechanical</text>
+    <text x="88" y="717" font-size="25" fill="#172942" font-weight="700">Mechanical writer</text>
+    <text x="88" y="751" font-size="20" fill="#52627a" font-weight="400">Apply an already-decided change</text>
+    <text x="88" y="780" font-size="20" fill="#52627a" font-weight="400">Return new choices to judgment</text>
+    <rect x="512" y="652" width="416" height="180" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="512" y="670" width="5" height="144" rx="2" fill="#007e83" />
+    <text x="536" y="682" font-size="15" fill="#007e83" font-weight="700">docs</text>
+    <text x="536" y="717" font-size="25" fill="#172942" font-weight="700">Documentation writer</text>
+    <text x="536" y="751" font-size="20" fill="#52627a" font-weight="400">Apply accepted wording</text>
+    <text x="536" y="780" font-size="20" fill="#52627a" font-weight="400">Preserve document ownership</text>
+    <rect x="960" y="652" width="416" height="180" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="960" y="670" width="5" height="144" rx="2" fill="#007e83" />
+    <text x="984" y="682" font-size="15" fill="#007e83" font-weight="700">implement</text>
+    <text x="984" y="717" font-size="25" fill="#172942" font-weight="700">Implementation owner</text>
+    <text x="984" y="751" font-size="20" fill="#52627a" font-weight="400">Reason and edit together when</text>
+    <text x="984" y="780" font-size="20" fill="#52627a" font-weight="400">the problem cannot be split</text>
+    <text x="64" y="887" font-size="22" fill="#6554c0" font-weight="700">STRATEGY AND FINAL REVIEW  /  Different responsibilities</text>
+    <rect x="64" y="914" width="640" height="180" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="64" y="932" width="5" height="144" rx="2" fill="#6554c0" />
+    <text x="88" y="944" font-size="15" fill="#6554c0" font-weight="700">supervisor  /  EIGHTH WORKER ROLE</text>
+    <text x="88" y="979" font-size="25" fill="#172942" font-weight="700">Trajectory supervisor</text>
+    <text x="88" y="1013" font-size="20" fill="#52627a" font-weight="400">Reads attempt history and proposes fresh directions</text>
+    <text x="88" y="1042" font-size="20" fill="#52627a" font-weight="400">Does not select, rank a preference, edit or dispatch</text>
+    <rect x="736" y="914" width="640" height="180" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="736" y="932" width="5" height="144" rx="2" fill="#9a5e0c" />
+    <text x="760" y="944" font-size="15" fill="#9a5e0c" font-weight="700">SEPARATE REVIEW INTEGRATION</text>
+    <text x="760" y="979" font-size="25" fill="#172942" font-weight="700">Formal reviewer / review service</text>
+    <text x="760" y="1013" font-size="20" fill="#52627a" font-weight="400">Assesses the current candidate under local policy</text>
+    <text x="760" y="1042" font-size="20" fill="#52627a" font-weight="400">A judge or refuter is not automatically final review</text>
+    <text x="64" y="1150" font-size="21" fill="#52627a" font-weight="400">Select the roles a task needs. This map does not require eight concurrent workers.</text>
+    <text x="64" y="1192" font-size="14" fill="#52627a" font-weight="400">AGENT WORKFLOW KIT  /  Generalized roles and handoffs  /  MIT</text>
+  </g>
+</svg>

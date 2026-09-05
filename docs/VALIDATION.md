@@ -1,4 +1,4 @@
-# Initial validation record
+# Validation record
 
 Verified on 2026-09-05. Exact repeatable commands are owned by [CONTRIBUTING.md](../CONTRIBUTING.md). This record describes teaching-kit evidence, not a production harness certification.
 
@@ -34,3 +34,9 @@ The demo's result covers one JSON fixture and its bound commit/input digest. It 
 Pi session fixtures and lifecycle behavior are version-specific. The synthetic greeting initializes host persistence and is explicitly not model output. Local records rely on the trusted host and are not signed or transactionally crash-proof. Windows/Linux host execution and other Pi versions have not been manually verified; the observed environment was macOS with Node.js 26.8.1.
 
 Original content and the staged payload were reviewed for private repository links, local paths, copied private implementation and credentials. Public publication remains a separate decision.
+
+## Role documentation update — 2026-09-05
+
+The role guide was checked against the author's Runtime role definitions and dispatch paths. It generalizes eight worker responsibilities, bounded collector delegation, the judgment/application split and operator selection after trajectory review, without distributing private prompts or configuration.
+
+The new role map and revised handoff diagram were rendered and inspected at full size and 800-pixel README width. The repository now contains six diagram sources. TypeScript compilation, all 20 existing behavioral tests, and documentation/link/skill checks passed after this update. No adapter behavior changed; the earlier Pi integration observations remain the applicable record. The teaching demo still does not dispatch or enforce these worker roles.
