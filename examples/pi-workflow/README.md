@@ -69,6 +69,10 @@ The model-facing `workflow_demo_propose` tool only proposes. There is no model-f
 
 The extension creates no timers or workers. Shutdown invalidates pending decisions and clears its status. It restores the selected session branch on start/navigation. [The framework](../../docs/EXTENSION_FRAMEWORK.md) explains what to add next and what those additions would require.
 
+## Adding model-backed workers
+
+The production design uses [configurable model and reasoning-effort profiles per role](../../docs/AGENT_ROLES.md#configure-model-and-reasoning-effort-per-role) to balance quality, cost and latency. A collector or mechanical writer can use an efficient profile while the judge uses a stronger reasoning profile. This demo's deterministic functions do not consume model/effort configuration. When replacing them with model workers, resolve and record the effective profile at assignment time, enforce the same role boundaries, and validate returned evidence and edits before accepting the handoff.
+
 ## What the role checks enforce
 
 The controller admits only the next supported role. Every recorded result includes an assignment ID, role, plan ID, source binding, predecessor ID and fixed target. Replay recomputes the permitted deterministic output and refuses stale predecessors, unknown roles, wrong targets, reused assignment IDs and altered decisions/candidates. Collection and judgment have no mutation operation; only the mechanical step can produce the candidate, and it can change only `ready` to `true`.

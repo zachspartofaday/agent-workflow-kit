@@ -26,6 +26,8 @@ This separation is a design goal, not a claim that existing runtimes have achiev
 
 The [role guide](AGENT_ROLES.md) lays out the eight worker roles and their handoffs. Separate the coordinator from writers, factual collection from judgment, and judgment from applying a decided change. A trajectory supervisor examines attempts and offers directions; the operator chooses. Formal review remains a distinct integration.
 
+Give each role a configurable model and reasoning-effort profile. This lets bounded collection and decided edits use efficient execution while judgment gets the reasoning capacity it needs. Validate host support, record the effective settings per assignment, and measure quality and total cost; see [role profiles](AGENT_ROLES.md#configure-model-and-reasoning-effort-per-role).
+
 Define each supported role's inputs, output, tool ceiling, source/path binding, stop conditions and permitted children. Verify the effective profile at startup. Do not turn a diagram or a role prompt into an unsupported permission guarantee. The teaching example admits three deterministic role functions with bound handoffs and a session candidate. It does not launch or isolate model workers.
 
 ## Written rule to tested mechanism

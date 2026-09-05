@@ -69,13 +69,46 @@ The trajectory supervisor is a separate read-only worker, not the coordinator an
 
 Return compact reports with source identity, observations, uncertainties and next evidence needed. The parent must still check load-bearing anchors. A separate session can reduce contamination; using a different model alone does not establish independence if it receives the author's preferred conclusion as a premise.
 
-## Role profiles belong in configuration
+## Configure model and reasoning effort per role
 
-A role is a capability and responsibility boundary, not a model name. Keep the selected model, reasoning settings, tool ceiling, timeout, concurrency and allowed child roles in validated configuration. Check the effective worker profile before work begins. A worker prompt cannot expand its own tools or assignment.
+**The roles are designed to support different configurable models and reasoning effort levels.** This is an efficiency mechanism as well as a responsibility split: reserve expensive reasoning for decisions that need it, and use an efficient execution profile for bounded evidence gathering and already-decided changes. Two roles can share a model while using different effort levels, or use different models altogether.
 
-Collection and frozen edits can use a model selected for efficient, reliable execution; judgment, refutation and difficult implementation need demonstrated reasoning quality. Evaluate those choices against representative tasks. Do not hard-code today's model names into the conceptual role definitions.
+The judge → mechanical writer handoff makes that practical. The reasoning-heavy worker resolves the decision once; the execution-focused worker applies it without paying to redesign it. Collection similarly supplies bounded evidence to the judgment worker. Savings are an objective to measure, not a guarantee: a cheaper worker that misses evidence or causes retries can increase total cost and elapsed time.
 
-A role card should state purpose, inputs, output, permitted actions, stop conditions and delegation. The runtime must separately enforce the permissions it claims. A sentence saying “read-only” is not a security boundary.
+| Roles | Illustrative profile | Why |
+| --- | --- | --- |
+| Collector, mechanical writer, documentation writer | Efficient model; lower effort where supported and sufficient | Bounded searches, frozen edits and accepted wording reward accurate execution. |
+| Auditor, judge, refuter, trajectory supervisor | Reasoning-capable model; higher effort when warranted | Risk assessment, evidence checking, counterexamples and trajectory analysis require judgment. |
+| Implementation owner | Capable coding/reasoning model; effort matched to complexity | Reasoning and editing stay together for interdependent changes. |
+
+These are starting hypotheses for evaluation, not the author's private assignments or mandatory defaults. A difficult collection task may need a stronger profile. Changing a model or effort setting does not change the role's permissions, output contract or independence requirements.
+
+For example, an extension could resolve aliases from its own configuration:
+
+```json
+{
+  "profiles": {
+    "efficient": { "model": "YOUR_EFFICIENT_MODEL", "effort": "low" },
+    "reasoning": { "model": "YOUR_REASONING_MODEL", "effort": "high" }
+  },
+  "roles": {
+    "collect": "efficient",
+    "mechanical": "efficient",
+    "docs": "efficient",
+    "auditor": "reasoning",
+    "judge": "reasoning",
+    "refuter": "reasoning",
+    "supervisor": "reasoning",
+    "implement": "reasoning"
+  }
+}
+```
+
+This is illustrative configuration for a runtime you build, **not a Pi configuration schema or a file consumed by the teaching demo**. Model identifiers and effort values must be resolved and validated against the selected provider/host. Reject unsupported settings or require an explicit configured fallback; do not silently pretend the requested effort was applied.
+
+Keep model selection and effort alongside the role's tool ceiling, timeout, concurrency and allowed children in validated configuration. Record the effective model and effort with each assignment so outcomes can be compared. Support explicit role overrides without weakening permissions. Evaluate profiles using representative tasks, checking correctness, missed findings, retries, token cost and end-to-end latency before lowering or raising the budget.
+
+A role card should state purpose, inputs, output, permitted actions, stop conditions and delegation. A worker prompt cannot expand its own tools or assignment. The runtime must separately enforce the permissions it claims; a sentence saying “read-only” is not a security boundary.
 
 ## What to add to your own extension
 

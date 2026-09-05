@@ -26,6 +26,8 @@ The coordinator routes work among eight specialist roles: **collector, auditor, 
 
 ![Eight worker roles, with operator decisions, coordinator routing and runtime enforcement kept distinct.](assets/diagrams/agent-roles.png)
 
+**Roles also let you configure model and reasoning effort independently for efficiency.** Collection and already-decided edits can use a faster, lower-cost profile; judgment, refutation and difficult implementation can use a more capable model or higher effort. This is one reason to separate deciding a change from applying it. [See role profiles and an illustrative configuration](docs/AGENT_ROLES.md#configure-model-and-reasoning-effort-per-role).
+
 The important handoff is often **evidence → judgment → decided application**, followed by validation and formal review. Difficult inseparable work uses the implementation-owner route. Repeated failure goes to a trajectory supervisor, which proposes directions for the operator to choose. [Read the role and routing guide](docs/AGENT_ROLES.md).
 
 ## Included
