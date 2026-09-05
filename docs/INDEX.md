@@ -4,6 +4,7 @@
 - [Agent roles](AGENT_ROLES.md): responsibilities, permissions, delegation and handoffs.
 - [Adoption](ADOPTION.md): map this workflow onto an existing repository.
 - [Extension framework](EXTENSION_FRAMEWORK.md): why and how to automate.
+- [Runtime components](RUNTIME_COMPONENTS.md): goal, plan, progress, subworker architecture, connections and implementation coverage.
 - [Contracts](CONTRACTS.md): records, ownership and freshness.
 - [Build milestones](BUILD_MILESTONES.md): stages beyond the teaching example.
 - [Visuals](VISUALS.md): diagrams and editable sources.

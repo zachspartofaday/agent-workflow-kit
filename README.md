@@ -13,6 +13,7 @@ A practical blueprint for turning an engineering process into an agent workflow:
 | Understand how the pieces fit | [Workflow handbook](docs/WORKFLOW.md) |
 | Understand the agent roles and handoffs | [Role guide and map](docs/AGENT_ROLES.md) |
 | Have an agent adapt your repository | [Adoption guide and prompt](docs/ADOPTION.md) |
+| Identify the runtime components to build | [Component blueprint and connections](docs/RUNTIME_COMPONENTS.md) |
 | Build your own Pi workflow extension | [Architecture and build path](docs/EXTENSION_FRAMEWORK.md) |
 | Try a small working example | [Pi teaching extension](examples/pi-workflow/README.md) |
 | Use one portable skill | [Skill catalog](skills/README.md) |
@@ -29,6 +30,8 @@ The coordinator routes work among eight specialist roles: **collector, auditor, 
 **Roles also let you configure model and reasoning effort independently for efficiency.** Collection and already-decided edits can use a faster, lower-cost profile; judgment, refutation and difficult implementation can use a more capable model or higher effort. This is one reason to separate deciding a change from applying it. [See role profiles and an illustrative configuration](docs/AGENT_ROLES.md#configure-model-and-reasoning-effort-per-role).
 
 The important handoff is often **evidence → judgment → decided application**, followed by validation and formal review. Difficult inseparable work uses the implementation-owner route. Repeated failure goes to a trajectory supervisor, which proposes directions for the operator to choose. [Read the role and routing guide](docs/AGENT_ROLES.md).
+
+Build guidance includes a [component-by-component blueprint](docs/RUNTIME_COMPONENTS.md): goal controller, plan manager, progress tracker, subworker runner and worker-side extension, scheduling, validation/review, persistence and continuation. It distinguishes the demo’s implemented subset from the remaining runtime work.
 
 ## Included
 

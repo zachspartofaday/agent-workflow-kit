@@ -132,3 +132,7 @@ flowchart LR
   Test --> Refusal[Old evidence cannot complete]
   Refusal --> Next[New plan and decision]
 ```
+
+## Runtime component connections
+
+The [component blueprint](RUNTIME_COMPONENTS.md#how-the-components-connect) includes an editable Mermaid diagram connecting goal, plan, admission, workers, validation/review, progress, persistence and continuation. Its inventory identifies what the executable demo covers and what remains to build.

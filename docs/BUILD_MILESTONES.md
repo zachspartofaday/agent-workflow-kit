@@ -14,6 +14,8 @@ Each slice needs observable behavior, failure tests and a disable path. Finish i
 | 8. Attempt history | Recurrence checkpoints and useful lessons | Intervention follows observed history; operator selects strategy |
 | 9. Multiple repos | Dependencies and integration acceptance | Consumer readiness waits for prerequisite and compatible evidence |
 
+Start with the [component inventory and dependency-oriented build order](RUNTIME_COMPONENTS.md#build-order-and-failure-checkpoints) to identify the modules each stage needs. The stages above are operational milestones; they are not separate extension packages.
+
 ## Worker lifecycle
 
 Choose supported responsibilities using the [role guide](AGENT_ROLES.md) before adding dispatch. Define the collector, judgment and writing boundaries and select only the routes your workflow needs. Role identity and permission checks accompany workspace and attempt identity.

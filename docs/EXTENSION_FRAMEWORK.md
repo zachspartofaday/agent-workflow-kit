@@ -10,6 +10,10 @@ Automate rules with identifiable inputs, a deterministic predicate and a clear f
 
 Costs include a maintained program, host API coupling, persisted-data versions and recovery testing. Stay with skills when tasks are short and the host already provides adequate controls. Add one mechanism when a demonstrated problem justifies it.
 
+## Concrete components to build
+
+Use the [runtime component blueprint](RUNTIME_COMPONENTS.md) to map the goal controller, plan manager, progress tracker, subworker runner and worker-side extension, role profiles, scheduling, validation/review, persistence, recovery and continuation. It includes an ownership inventory, connection diagram, suggested module layout, build order and an explicit teaching-demo coverage column. These are logical components, not a requirement to install a separate extension for each one.
+
 ## Three responsibilities
 
 ![Repository knowledge and skills feed a workflow core; a Pi adapter supplies commands, tools, lifecycle, persistence and UI.](../assets/diagrams/extension-layers.png)
@@ -49,7 +53,8 @@ A tool-call hook is not a general security boundary. Extensions run with host pe
 ```text
 Use design-workflow-extension with my adopted repository docs.
 Identify repeated problems that merit deterministic mechanisms and what remains judgment.
-Design a Pi extension with a testable core and explicit host responsibilities. Map selected
+Use the runtime component blueprint to identify goal, plan, progress, parent runner and
+worker-side responsibilities. Design a Pi extension with a testable core and explicit host responsibilities. Map selected
 rules to records, event owners, enforcement points, failures and tests. Preserve existing
 authorization and do not compete with an active controller. Propose one vertical slice with
 acceptance, data boundaries, rollback and an isolated Pi walkthrough. Treat the teaching
