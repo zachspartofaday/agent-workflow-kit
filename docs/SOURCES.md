@@ -12,14 +12,6 @@ The [NVIDIA technical overview](https://developer.nvidia.com/blog/nvidia-avo-rea
 
 No benchmark results transfer to this kit. It does not implement AVO or claim equivalent performance. All diagrams are original; paper figures and logos are not redistributed. No endorsement is implied.
 
-## GPT-Erdos: candidate proofs and review
-
-[GPT-Erdos](https://github.com/neelsomani/gpt-erdos), maintained by Neel Somani, is a research repository documenting LLM-generated candidate proofs for Erdős problems. Its [methodology](https://github.com/neelsomani/gpt-erdos#methodology) describes literature checks, candidate generation, reviewer feedback and, where possible, Lean autoformalization attempts. This reference is a project and methodology, not a paper citation.
-
-It was an earlier inspiration for the author's workflow. Relevant lessons are to distinguish a candidate claim from a checked result, preserve reviewer feedback, and classify outcomes more carefully than “solved” or “failed.” The project's findings distinguish literature recovery, hidden constraints, conditional arguments, non-improving proofs and subtle errors.
-
-The engineering adaptation is to retain evidence, assumptions and finding dispositions, and use independent review or refutation before accepting a claim. That adaptation is this kit's synthesis; GPT-Erdos does not establish this kit's role architecture, runtime correctness or performance. No proof artifacts or project code are redistributed here.
-
 ## Pi
 
 - [Extension guide](https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/extensions.md): tools, commands, lifecycle, UI and persistence.
