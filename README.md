@@ -43,4 +43,4 @@ Created by Zach Skjaveland, informed by his Limitless engineering workflow. This
 
 Research influences, including NVIDIA AVO, are credited in [Sources](docs/SOURCES.md). No affiliation, endorsement or benchmark equivalence is implied.
 
-Original code, documentation and artwork use the [MIT license](LICENSE). This first version is prepared for private review before public sharing.
+Original code, documentation and artwork use the [MIT license](LICENSE).
