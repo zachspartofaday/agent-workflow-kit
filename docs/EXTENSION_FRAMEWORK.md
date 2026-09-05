@@ -26,7 +26,7 @@ This separation is a design goal, not a claim that existing runtimes have achiev
 
 The [role guide](AGENT_ROLES.md) lays out the eight worker roles and their handoffs. Separate the coordinator from writers, factual collection from judgment, and judgment from applying a decided change. A trajectory supervisor examines attempts and offers directions; the operator chooses. Formal review remains a distinct integration.
 
-Define each supported role's inputs, output, tool ceiling, source/path binding, stop conditions and permitted children. Verify the effective profile at startup. Do not turn a diagram or a role prompt into an unsupported permission guarantee. The teaching example does not implement worker dispatch.
+Define each supported role's inputs, output, tool ceiling, source/path binding, stop conditions and permitted children. Verify the effective profile at startup. Do not turn a diagram or a role prompt into an unsupported permission guarantee. The teaching example admits three deterministic role functions with bound handoffs and a session candidate. It does not launch or isolate model workers.
 
 ## Written rule to tested mechanism
 
@@ -54,7 +54,7 @@ acceptance, data boundaries, rollback and an isolated Pi walkthrough. Treat the 
 example as a pattern, not a production security or orchestration library.
 ```
 
-Read [contracts](CONTRACTS.md), run [the example](../examples/pi-workflow/README.md), then use [build milestones](BUILD_MILESTONES.md). The demo covers one fixture plan/check/close loop. Worker orchestration and review integration are later stages.
+Read [contracts](CONTRACTS.md), run [the example](../examples/pi-workflow/README.md), then use [build milestones](BUILD_MILESTONES.md). The demo covers one confirmed collector/judge/mechanical route, candidate check and closeout. Worker orchestration and review integration are later stages.
 
 ## Pi versus standalone
 

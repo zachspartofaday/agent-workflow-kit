@@ -1,3 +1,4 @@
+import { profiles } from "./roles.js";
 import { existsSync } from "node:fs";
 import type { ExtensionAPI, ExtensionContext } from "@earendil-works/pi-coding-agent";
 import { Type } from "typebox";
@@ -26,7 +27,7 @@ export default function extension(pi: ExtensionAPI) {
     if (!file || !existsSync(file) || !hasAssistant) throw new Error("Use the prepared demo session (npm run demo); fresh Pi sessions may not yet persist entries.");
   };
   pi.registerTool({
-    name: "workflow_demo_propose", label: "Propose fixture demo", description: "Propose one fixture check. This does not confirm or execute it; the operator uses /workflow-demo confirm.",
+    name: "workflow_demo_propose", label: "Propose fixture demo", description: "Propose the fixed collector/judge/mechanical candidate workflow. This does not confirm or execute it; the operator uses /workflow-demo confirm.",
     parameters: Type.Object({ objective: Type.String({ minLength: 1, maxLength: 240 }) }, { additionalProperties: false }),
     async execute(_id, params, signal, _update, ctx) {
       if (signal?.aborted) throw new Error("Proposal cancelled");
@@ -36,7 +37,7 @@ export default function extension(pi: ExtensionAPI) {
     }
   });
   pi.registerCommand("workflow-demo", {
-    description: "Fixture teaching workflow: propose [objective] | confirm | check | close | status | reset",
+    description: "Fixture teaching workflow: propose [objective] | confirm | collect | judge | apply | check | close | status | roles | report | reset",
     async handler(args, ctx) {
       const [action, ...words] = args.trim().split(/\s+/);
       try {
@@ -44,13 +45,18 @@ export default function extension(pi: ExtensionAPI) {
           case "propose": requirePersistedSession(ctx); controller.propose(words.join(" ") || "Verify the teaching fixture", ctx.cwd); break;
           case "confirm":
             if (!ctx.hasUI) throw new Error("Confirmation needs an operator UI; no headless auto-approval");
-            await controller.confirm(ctx.cwd, description => ctx.ui.confirm("Confirm fixture check", description));
+            await controller.confirm(ctx.cwd, description => ctx.ui.confirm("Confirm fixture role workflow", description));
             break;
+          case "collect": controller.run("collect", ctx.cwd); break;
+          case "judge": controller.run("judge", ctx.cwd); break;
+          case "apply": controller.run("mechanical", ctx.cwd); break;
+          case "report": ctx.ui.notify(controller.report(ctx.cwd), "info"); return;
+          case "roles": ctx.ui.notify(Object.entries(profiles).map(([role, p]) => `${role}: ${p.purpose}; target=${p.target}`).join("\n"), "info"); return;
           case "check": controller.check(ctx.cwd); break;
           case "close": controller.close(ctx.cwd); break;
           case "reset": controller.reset(); break;
           case "status": break;
-          default: throw new Error("Use propose, confirm, check, close, status or reset");
+          default: throw new Error("Use propose, confirm, collect, judge, apply, check, close, status, roles, report or reset");
         }
         ctx.ui.notify(render(ctx), "info");
       } catch (error) {

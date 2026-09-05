@@ -1,3 +1,4 @@
+import { digest } from "../examples/pi-workflow/roles.js";
 import test from "node:test";
 import assert from "node:assert/strict";
 import { Controller, type Ports } from "../examples/pi-workflow/controller.js";
@@ -5,16 +6,16 @@ import type { Binding, Event } from "../examples/pi-workflow/core.js";
 function harness() {
   let sequence = 0;
   let current: Binding = { root: "/fixture", commit: "a".repeat(40), inputDigest: "b".repeat(64) };
-  let bytes = Buffer.from('{"schema":1,"lesson":"evidence","ready":true}');
+  let bytes = Buffer.from('{"schema":1,"lesson":"evidence","ready":false}');
   const records: Event[] = [];
-  const ports: Ports = { id: () => `id-${++sequence}`, append: event => records.push(event), inspect: () => ({ binding: { ...current }, bytes }) };
+  const ports: Ports = { id: () => `id-${++sequence}`, append: event => records.push(event), inspect: () => ({ binding: { ...current, inputDigest: digest(bytes) }, bytes }) };
   const controller = new Controller(ports);
-  return { controller, records, ports, setBinding: (b: Partial<Binding>) => { current = { ...current, ...b }; }, failFixture: () => { bytes = Buffer.from('{}'); } };
+  return { controller, records, ports, setBinding: (b: Partial<Binding>) => { current = { ...current, ...b }; if (b.inputDigest) { bytes = Buffer.concat([bytes, Buffer.from(" ")]); } }, failFixture: () => { bytes = Buffer.from('{}'); } };
 }
 test("a real fixture check completes and rehydrates", async () => {
   const h = harness(); h.controller.propose("Check fixture", "/fixture");
-  await h.controller.confirm("/fixture", async text => { assert.match(text, /No edits/); return true; });
-  h.controller.check("/fixture"); h.controller.close("/fixture");
+  await h.controller.confirm("/fixture", async text => { assert.match(text, /No repository edits/); return true; });
+  route(h.controller); h.controller.check("/fixture"); h.controller.close("/fixture");
   const restored = new Controller(h.ports); restored.restore(h.records);
   assert.equal(restored.getState().phase, "complete");
 });
@@ -56,20 +57,22 @@ test("input changes during confirmation/check or before close refuse", async () 
   await assert.rejects(h.controller.confirm("/fixture", async () => { h.setBinding({ inputDigest: "c".repeat(64) }); return true; }), /inputs changed/);
   h.controller.propose("Retry", "/fixture");
   await h.controller.confirm("/fixture", async () => true);
+  route(h.controller);
   const original = h.ports.inspect; let reads = 0;
   h.ports.inspect = cwd => { if (++reads === 2) h.setBinding({ commit: "d".repeat(40) }); return original(cwd); };
   assert.throws(() => h.controller.check("/fixture"), /Inputs changed during/);
   assert.equal(h.records.filter(e => e.kind === "checked").length, 0);
   h.ports.inspect = original;
   h.controller.propose("Retry current", "/fixture"); await h.controller.confirm("/fixture", async () => true);
-  h.controller.check("/fixture"); h.setBinding({ inputDigest: "e".repeat(64) });
+  route(h.controller); h.controller.check("/fixture"); h.setBinding({ inputDigest: "e".repeat(64) });
   assert.throws(() => h.controller.close("/fixture"), /inputs changed/);
   assert.match(h.controller.status("/fixture"), /stale/);
 });
-test("failed fixture produces failed evidence and cannot complete", async () => {
+test("malformed fixture stops collection instead of inventing a repair", async () => {
   const h = harness(); h.failFixture(); h.controller.propose("Check", "/fixture");
-  await h.controller.confirm("/fixture", async () => true); h.controller.check("/fixture");
-  assert.equal(h.controller.getState().evidence?.outcome, "failed");
+  await h.controller.confirm("/fixture", async () => true);
+  assert.throws(() => h.controller.run("collect", "/fixture"), /fixture shape/);
+  assert.equal(h.controller.getState().phase, "confirmed");
   assert.throws(() => h.controller.close("/fixture"), /passing/);
 });
 test("persistence failure does not publish success", () => {
@@ -86,4 +89,31 @@ test("invalid history remains blocked, including reset; inactive startup does no
   assert.match(h.controller.status("/fixture"), /Invalid demo history/);
   assert.throws(() => h.controller.reset(), /Invalid demo history/);
   assert.throws(() => h.controller.propose("Check", "/fixture"), /Invalid demo history/);
+});
+
+function route(controller: Controller) {
+  for (const role of ["collect", "judge", "mechanical"] as const) controller.run(role, "/fixture");
+}
+test("role route resumes mid-handoff and refuses a writer before judgment", async () => {
+  const h = harness(); h.controller.propose("Prepare candidate", "/fixture");
+  await h.controller.confirm("/fixture", async () => true);
+  assert.throws(() => h.controller.run("mechanical", "/fixture"), /out of order/);
+  h.controller.run("collect", "/fixture");
+  const resumed = new Controller(h.ports); resumed.restore(h.records);
+  resumed.run("judge", "/fixture"); resumed.run("mechanical", "/fixture");
+  assert.equal(JSON.parse(h.ports.inspect("/fixture").bytes.toString()).ready, false);
+  assert.deepEqual(resumed.getState().handoff?.output, { role: "mechanical", candidate: { schema: 1, lesson: "evidence", ready: true } });
+  resumed.check("/fixture"); resumed.close("/fixture");
+  assert.equal(resumed.getState().phase, "complete");
+});
+test("stale source, reset, and append failure cannot publish a role result", async () => {
+  const h = harness(); h.controller.propose("Candidate", "/fixture");
+  await h.controller.confirm("/fixture", async () => true);
+  h.controller.run("collect", "/fixture"); h.setBinding({ commit: "c".repeat(40) });
+  assert.throws(() => h.controller.run("judge", "/fixture"), /inputs changed/);
+  h.controller.reset(); assert.throws(() => h.controller.run("judge", "/fixture"), /out of order/);
+  h.controller.propose("Retry", "/fixture"); await h.controller.confirm("/fixture", async () => true);
+  h.ports.append = () => { throw new Error("disk unavailable"); };
+  assert.throws(() => h.controller.run("collect", "/fixture"), /persistence failed/);
+  assert.equal(h.controller.getState().phase, "confirmed");
 });

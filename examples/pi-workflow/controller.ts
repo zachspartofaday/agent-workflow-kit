@@ -1,3 +1,4 @@
+import { runRole, profiles, type Role, type Assignment } from "./roles.js";
 import { randomUUID } from "node:crypto";
 import { assertCurrent, initial, parseEvent, replay, requireCondition, sameBinding, summary, type Binding, type Event, type State } from "./core.js";
 import { checkFixture, inspect } from "./fixture.js";
@@ -56,7 +57,7 @@ export class Controller {
   propose(objective: string, cwd: string): void {
     this.available();
     requireCondition(!this.pending, "An operator decision is pending");
-    const event: Event = { version: 1, id: this.ports.id(), kind: "proposed", plan: { id: this.ports.id(), objective, checkId: "fixture-v1", binding: this.ports.inspect(cwd).binding } };
+    const event: Event = { version: 2, id: this.ports.id(), kind: "proposed", plan: { id: this.ports.id(), objective, checkId: "fixture-roles-v2", binding: this.ports.inspect(cwd).binding } };
     this.commit(event);
   }
   async confirm(cwd: string, decide: (description: string) => Promise<boolean>): Promise<void> {
@@ -67,33 +68,54 @@ export class Controller {
     const generation = this.generation;
     this.pending = true;
     try {
-      const approved = await decide(`Plan ${plan.id}\n${plan.objective}\nOne fixture-v1 read/check only. No edits, workers, review or merge.`);
+      const approved = await decide(`Plan ${plan.id}\n${plan.objective}\nOne fixture-roles-v2 route: collector reads the fixture, judge freezes ready=true, mechanical writer creates a session candidate, then validation. No repository edits, model workers, review or merge.`);
       requireCondition(generation === this.generation, "Session changed; confirmation discarded");
       requireCondition(approved, "Confirmation cancelled; plan remains unconfirmed");
       const current = this.ports.inspect(cwd).binding;
       assertCurrent(this.state, current);
       requireCondition(this.state.plan?.id === plan.id, "Plan changed during confirmation");
-      this.commit({ version: 1, id: this.ports.id(), kind: "confirmed", planId: plan.id, binding: current, source: "operator-command" });
+      this.commit({ version: 2, id: this.ports.id(), kind: "confirmed", planId: plan.id, binding: current, source: "operator-command" });
     } finally { if (generation === this.generation) this.pending = false; }
+  }
+  report(cwd: string): string {
+    this.available();
+    assertCurrent(this.state, this.ports.inspect(cwd).binding);
+    return JSON.stringify({ phase: this.state.phase, planId: this.state.plan?.id, handoff: this.state.handoff, evidence: this.state.evidence }, null, 2);
+  }
+  run(role: Role, cwd: string): void {
+    this.available();
+    const expected = this.state.phase === "confirmed" ? "collect" : this.state.phase === "collected" ? "judge" : this.state.phase === "judged" ? "mechanical" : undefined;
+    requireCondition(expected && role === expected, "Role handoff is out of order or lacks confirmation");
+    const before = this.ports.inspect(cwd);
+    const plan = assertCurrent(this.state, before.binding);
+    requireCondition(Object.hasOwn(profiles, role), "Unknown worker role");
+    const assignment: Assignment = { id: this.ports.id(), role, planId: plan.id, binding: before.binding,
+      inputId: this.state.handoff?.id ?? plan.id, target: profiles[role].target };
+    const output = runRole(role, assignment, before.bytes.toString("utf8"), this.state.handoff?.output);
+    const after = this.ports.inspect(cwd);
+    requireCondition(sameBinding(before.binding, after.binding), "Inputs changed during role execution; propose a new plan");
+    this.commit({ version: 2, id: this.ports.id(), kind: "role-completed", planId: plan.id, binding: after.binding, assignment, output });
   }
   check(cwd: string): void {
     this.available();
-    requireCondition(this.state.phase === "confirmed", "An unconsumed operator confirmation is required");
+    requireCondition(this.state.phase === "applied", "An applied candidate and unconsumed operator confirmation are required");
     const before = this.ports.inspect(cwd);
     const plan = assertCurrent(this.state, before.binding);
-    const result = checkFixture(before.bytes);
+    const output = this.state.handoff?.output;
+    requireCondition(output?.role === "mechanical", "Missing mechanical candidate");
+    const result = checkFixture(Buffer.from(JSON.stringify(output.candidate)));
     const after = this.ports.inspect(cwd);
     requireCondition(sameBinding(before.binding, after.binding), "Inputs changed during check; propose a new plan");
-    this.commit({ version: 1, id: this.ports.id(), kind: "checked", planId: plan.id, binding: after.binding, evidence: { attemptId: this.ports.id(), ...result } });
+    this.commit({ version: 2, id: this.ports.id(), kind: "checked", planId: plan.id, binding: after.binding, evidence: { attemptId: this.ports.id(), ...result } });
   }
   close(cwd: string): void {
     this.available();
     const current = this.ports.inspect(cwd).binding;
     const plan = assertCurrent(this.state, current);
-    this.commit({ version: 1, id: this.ports.id(), kind: "completed", planId: plan.id, binding: current });
+    this.commit({ version: 2, id: this.ports.id(), kind: "completed", planId: plan.id, binding: current });
   }
   reset(): void {
-    this.commit({ version: 1, id: this.ports.id(), kind: "reset" });
+    this.commit({ version: 2, id: this.ports.id(), kind: "reset" });
     this.generation++; this.pending = false;
   }
 }

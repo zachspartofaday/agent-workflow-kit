@@ -3,7 +3,8 @@ import { createHash } from "node:crypto";
 import { closeSync, constants, fstatSync, openSync, readFileSync, realpathSync } from "node:fs";
 import { join, relative, isAbsolute } from "node:path";
 import { requireCondition, type Binding } from "./core.js";
-export const FIXTURE = "examples/pi-workflow/fixture.json";
+import { SOURCE } from "./roles.js";
+export const FIXTURE = SOURCE;
 export function inspect(cwd: string): { binding: Binding; bytes: Buffer } {
   const git = (...args: string[]) => execFileSync("git", args, { cwd, encoding: "utf8", timeout: 3000, maxBuffer: 16384, stdio: ["ignore", "pipe", "pipe"] }).trim();
   const root = realpathSync(git("rev-parse", "--show-toplevel"));

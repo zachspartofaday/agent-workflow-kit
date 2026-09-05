@@ -2,7 +2,7 @@
 
 The workflow separates **finding facts, judging claims, applying a decided change, and challenging the result**. Treating all of those as a generic “worker” hides the reason for the role system.
 
-This guide generalizes the role responsibilities and routing found in the author's Runtime source. It preserves the distinctions without distributing private role prompts, schemas, model assignments or operating limits. Readers can adapt the design; the kit's small executable demo does not dispatch these workers.
+This guide generalizes the role responsibilities and routing found in the author's Runtime source. It preserves the distinctions without distributing private role prompts, schemas, model assignments or operating limits. Readers can adapt the design; the kit's small executable demo exercises collector, judge and mechanical roles as deterministic functions; it does not launch model workers.
 
 ![Role map: operator, coordinator and runtime controls; four evidence and judgment workers; three writing workers; a trajectory supervisor and separate formal review.](../assets/diagrams/agent-roles.png)
 
@@ -18,7 +18,7 @@ The coordinator is the main agent session. The eight worker roles below are dist
 
 ## Eight worker roles
 
-The short keys identify the conceptual roles being generalized; they are not configuration accepted by the teaching demo.
+The short keys identify the conceptual roles being generalized; only `collect`, `judge` and `mechanical` have executable deterministic counterparts in the teaching demo.
 
 | Role | Question it owns | Expected output | Writes? |
 | --- | --- | --- | --- |

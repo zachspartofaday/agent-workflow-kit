@@ -1,6 +1,6 @@
 # Validation record
 
-Verified on 2026-09-05. Exact repeatable commands are owned by [CONTRIBUTING.md](../CONTRIBUTING.md). This record describes teaching-kit evidence, not a production harness certification.
+Verified on 2026-09-05. The initial and documentation-only observations below precede the executable role update recorded at the end. Exact repeatable commands are owned by [CONTRIBUTING.md](../CONTRIBUTING.md). This record describes teaching-kit evidence, not a production harness certification.
 
 ## Automated checks
 
@@ -40,3 +40,14 @@ Original content and the staged payload were reviewed for private repository lin
 The role guide was checked against the author's Runtime role definitions and dispatch paths. It generalizes eight worker responsibilities, bounded collector delegation, the judgment/application split and operator selection after trajectory review, without distributing private prompts or configuration.
 
 The new role map and revised handoff diagram were rendered and inspected at full size and 800-pixel README width. The repository now contains six diagram sources. TypeScript compilation, all 20 existing behavioral tests, and documentation/link/skill checks passed after this update. No adapter behavior changed; the earlier Pi integration observations remain the applicable record. The teaching demo still does not dispatch or enforce these worker roles.
+
+
+## Executable role update — 2026-09-05
+
+The example now runs deterministic collector, judge and mechanical functions with role/target admission, bound predecessor identities, source freshness and exact-output validation. The writer changes a session-stored candidate from `ready=false` to `ready=true`; the source fixture remains unchanged. These are trusted-process application checks, not model-worker isolation or an implementation of all eight roles.
+
+TypeScript compilation, all 24 behavioral tests and documentation checks passed. Negative cases include skipped roles, wrong targets, stale predecessors and source, forged evidence/decisions/candidates, reused assignment IDs, duplicate delivery, malformed source, reset and persistence failure. Existing approval, failed-result and stale-completion coverage remains. Version-1 payloads are deliberately refused; old approvals are not migrated.
+
+The actual Pi 0.85.0 RPC walkthrough passed cancellation/approval, early-writer refusal, report inspection, restart after collection, judgment/application, candidate validation, completion restoration, stale-source refusal and unsupported-shape refusal. It verified the source fixture remained unchanged. No model calls were made.
+
+An isolated interactive Pi 0.85.0 TUI walkthrough displayed the expanded confirmation at 80 columns, refused an early writer, advanced through all three roles, showed the mechanical assignment and `ready=true` candidate through `report`, passed validation and completed. The report wrapped long identities; phase/next-action status remained readable. Exit settled successfully. The previously noted optional `fd` warning persisted and did not affect the demo. No diagrams changed in this update.

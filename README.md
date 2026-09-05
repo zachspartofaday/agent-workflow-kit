@@ -30,7 +30,7 @@ The important handoff is often **evidence → judgment → decided application**
 
 ## Included
 
-Nine standalone skills, adaptable templates, fictional examples, a rule-to-mechanism framework, original technical diagrams, and a runnable TypeScript Pi extension. The extension demonstrates an operator decision, a fixed fixture check, versioned state and evidence freshness. It does not supervise production workers, enforce a filesystem sandbox, automate code review or merge changes.
+Nine standalone skills, adaptable templates, fictional examples, a rule-to-mechanism framework, original technical diagrams, and a runnable TypeScript Pi extension. The extension demonstrates an operator decision, deterministic collector/judge/mechanical handoffs, a session candidate, a fixed validation check and evidence freshness. It does not supervise production workers, enforce a filesystem sandbox, automate code review or merge changes.
 
 ## Origins and reuse
 

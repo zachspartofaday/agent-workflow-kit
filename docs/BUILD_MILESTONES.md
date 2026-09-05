@@ -1,10 +1,10 @@
 # Grow an extension in useful slices
 
-Each slice needs observable behavior, failure tests and a disable path. Finish its recovery cases before expanding authority. The example implements only the first slice's narrow fixture workflow.
+Each slice needs observable behavior, failure tests and a disable path. Finish its recovery cases before expanding authority. The example implements the first slice with three deterministic role handoffs and a session candidate; process-based workers remain later work.
 
 | Stage | Build | Acceptance |
 | --- | --- | --- |
-| 1. State and one check | Proposal, decision, fixed check, events, status | Reject missing decision, changed input, failed check and malformed history |
+| 1. State and one check | Proposal, decision, bound role handoffs, candidate, fixed check, events, status | Reject missing decision, changed input, failed check and malformed history |
 | 2. Guidance | Resolve adopted command owners and repository identity | Ambiguous guidance blocks; no invented defaults |
 | 3. Workspaces | One assigned writer per registered branch/worktree | Refuse shared ownership and unknown cleanup targets |
 | 4. Execution | Reviewed commands, bounded output, cancellation | Launch failure, nonzero exit and parent death cannot become success |
