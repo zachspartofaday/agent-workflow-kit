@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">Coordinate work without collecting every transcript</title>
+  <desc id="desc">Optional advanced design: separate ownership, preserve dependencies, integrate actual evidence.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0 0 L8 4 L0 8" fill="none" stroke="#007e83" stroke-width="1.5" />
+    </marker>
+  </defs>
+  <rect width="1440" height="900" fill="#f3f6fb" />
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="64" y="66" font-size="38" fill="#172942" font-weight="700">Coordinate work without collecting every transcript</text>
+    <text x="64" y="106" font-size="22" fill="#52627a" font-weight="400">Optional advanced design: separate ownership, preserve dependencies, integrate actual evidence.</text>
+    <rect x="470" y="150" width="500" height="150" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="470" y="168" width="5" height="114" rx="2" fill="#6554c0" />
+    <text x="494" y="180" font-size="15" fill="#6554c0" font-weight="700">COORDINATION</text>
+    <text x="494" y="214" font-size="25" fill="#172942" font-weight="700">Current plan and dependency state</text>
+    <text x="494" y="248" font-size="20" fill="#52627a" font-weight="400">Bound assignments • concise evidence</text>
+    <rect x="64" y="395" width="416" height="170" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="64" y="413" width="5" height="134" rx="2" fill="#007e83" />
+    <text x="88" y="425" font-size="15" fill="#007e83" font-weight="700">ISOLATED RESPONSIBILITY</text>
+    <text x="88" y="459" font-size="25" fill="#172942" font-weight="700">Writer A</text>
+    <text x="88" y="493" font-size="20" fill="#52627a" font-weight="400">Assigned source and scope</text>
+    <text x="88" y="522" font-size="20" fill="#52627a" font-weight="400">Current evidence with explicit gaps</text>
+    <rect x="512" y="395" width="416" height="170" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="512" y="413" width="5" height="134" rx="2" fill="#007e83" />
+    <text x="536" y="425" font-size="15" fill="#007e83" font-weight="700">ISOLATED RESPONSIBILITY</text>
+    <text x="536" y="459" font-size="25" fill="#172942" font-weight="700">Writer B</text>
+    <text x="536" y="493" font-size="20" fill="#52627a" font-weight="400">Assigned source and scope</text>
+    <text x="536" y="522" font-size="20" fill="#52627a" font-weight="400">Current evidence with explicit gaps</text>
+    <rect x="960" y="395" width="416" height="170" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="960" y="413" width="5" height="134" rx="2" fill="#007e83" />
+    <text x="984" y="425" font-size="15" fill="#007e83" font-weight="700">ISOLATED RESPONSIBILITY</text>
+    <text x="984" y="459" font-size="25" fill="#172942" font-weight="700">Reviewer</text>
+    <text x="984" y="493" font-size="20" fill="#52627a" font-weight="400">Assigned source and scope</text>
+    <text x="984" y="522" font-size="20" fill="#52627a" font-weight="400">Current evidence with explicit gaps</text>
+    <polyline points="580,300 580,340 272,340 272,385" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
+    <polyline points="720,300 720,385" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
+    <polyline points="860,300 860,340 1168,340 1168,385" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
+    <polyline points="272,565 272,620 500,620 500,655" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
+    <polyline points="720,565 720,655" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
+    <polyline points="1168,565 1168,620 940,620 940,655" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
+    <rect x="320" y="665" width="800" height="155" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="320" y="683" width="5" height="119" rx="2" fill="#007e83" />
+    <text x="344" y="695" font-size="15" fill="#007e83" font-weight="700">INTEGRATION</text>
+    <text x="344" y="729" font-size="25" fill="#172942" font-weight="700">Accept the combined outcome</text>
+    <text x="344" y="763" font-size="20" fill="#52627a" font-weight="400">Prerequisites settled • consumers checked • unresolved work stays visible</text>
+    <text x="64" y="326" font-size="20" fill="#007e83" font-weight="700">One writer per workspace</text>
+    <text x="978" y="326" font-size="20" fill="#007e83" font-weight="700">Independent source inspection</text>
+    <text x="64" y="872" font-size="14" fill="#52627a" font-weight="400">AGENT WORKFLOW KIT  /  Original teaching diagrams  /  MIT</text>
+  </g>
+</svg>

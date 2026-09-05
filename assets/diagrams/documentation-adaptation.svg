@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="860" viewBox="0 0 1440 860" role="img" aria-labelledby="title desc">
+  <title id="title">Adapt the workflow to the repository</title>
+  <desc id="desc">Map before editing. Preserve authority. Avoid a parallel documentation system.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0 0 L8 4 L0 8" fill="none" stroke="#007e83" stroke-width="1.5" />
+    </marker>
+  </defs>
+  <rect width="1440" height="860" fill="#f3f6fb" />
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="64" y="66" font-size="38" fill="#172942" font-weight="700">Adapt the workflow to the repository</text>
+    <text x="64" y="106" font-size="22" fill="#52627a" font-weight="400">Map before editing. Preserve authority. Avoid a parallel documentation system.</text>
+    <rect x="64" y="190" width="304" height="180" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="64" y="208" width="5" height="144" rx="2" fill="#007e83" />
+    <text x="88" y="220" font-size="15" fill="#007e83" font-weight="700">01 / INSPECT</text>
+    <text x="88" y="254" font-size="25" fill="#172942" font-weight="700">Existing repository</text>
+    <text x="88" y="288" font-size="20" fill="#52627a" font-weight="400">Instructions, docs, config</text>
+    <text x="88" y="317" font-size="20" fill="#52627a" font-weight="400">Current diff and task</text>
+    <polyline points="368,277 393,277" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
+    <rect x="400" y="190" width="304" height="180" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="400" y="208" width="5" height="144" rx="2" fill="#007e83" />
+    <text x="424" y="220" font-size="15" fill="#007e83" font-weight="700">02 / MAP</text>
+    <text x="424" y="254" font-size="25" fill="#172942" font-weight="700">Document owners</text>
+    <text x="424" y="288" font-size="20" fill="#52627a" font-weight="400">Reuse paths and rules</text>
+    <text x="424" y="317" font-size="20" fill="#52627a" font-weight="400">Expose conflicts and gaps</text>
+    <polyline points="704,277 729,277" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
+    <rect x="736" y="190" width="304" height="180" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="736" y="208" width="5" height="144" rx="2" fill="#007e83" />
+    <text x="760" y="220" font-size="15" fill="#007e83" font-weight="700">03 / DECIDE</text>
+    <text x="760" y="254" font-size="25" fill="#172942" font-weight="700">Accepted adaptation</text>
+    <text x="760" y="288" font-size="20" fill="#52627a" font-weight="400">Smallest useful changes</text>
+    <text x="760" y="317" font-size="20" fill="#52627a" font-weight="400">Resolve material choices</text>
+    <polyline points="1040,277 1065,277" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
+    <rect x="1072" y="190" width="304" height="180" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="1072" y="208" width="5" height="144" rx="2" fill="#007e83" />
+    <text x="1096" y="220" font-size="15" fill="#007e83" font-weight="700">04 / VERIFY</text>
+    <text x="1096" y="254" font-size="25" fill="#172942" font-weight="700">Local guidance</text>
+    <text x="1096" y="288" font-size="20" fill="#52627a" font-weight="400">Check links and facts</text>
+    <text x="1096" y="317" font-size="20" fill="#52627a" font-weight="400">Report remaining gaps</text>
+    <polyline points="1224,370 1224,440 552,440 552,380" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
+    <text x="650" y="478" font-size="22" fill="#007e83" font-weight="700">Repeat adoption → reconcile the same owners</text>
+    <rect x="64" y="535" width="640" height="220" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="64" y="553" width="5" height="184" rx="2" fill="#6554c0" />
+    <text x="88" y="565" font-size="15" fill="#6554c0" font-weight="700">PRESERVE</text>
+    <text x="88" y="599" font-size="25" fill="#172942" font-weight="700">What already works</text>
+    <text x="88" y="633" font-size="20" fill="#52627a" font-weight="400">Stronger local requirements</text>
+    <text x="88" y="662" font-size="20" fill="#52627a" font-weight="400">Canonical commands and historical decisions</text>
+    <text x="88" y="691" font-size="20" fill="#52627a" font-weight="400">Unrelated user edits and established terminology</text>
+    <rect x="736" y="535" width="640" height="220" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="736" y="553" width="5" height="184" rx="2" fill="#007e83" />
+    <text x="760" y="565" font-size="15" fill="#007e83" font-weight="700">DISCOVER</text>
+    <text x="760" y="599" font-size="25" fill="#172942" font-weight="700">What must be established</text>
+    <text x="760" y="633" font-size="20" fill="#52627a" font-weight="400">Missing values remain explicit gaps</text>
+    <text x="760" y="662" font-size="20" fill="#52627a" font-weight="400">Templates do not establish project facts</text>
+    <text x="760" y="691" font-size="20" fill="#52627a" font-weight="400">Create a document only when its role is missing</text>
+    <text x="64" y="832" font-size="14" fill="#52627a" font-weight="400">AGENT WORKFLOW KIT  /  Original teaching diagrams  /  MIT</text>
+  </g>
+</svg>

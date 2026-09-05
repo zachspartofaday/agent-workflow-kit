@@ -1,0 +1,22 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import extension from "../examples/pi-workflow/index.js";
+import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
+test("adapter exposes proposal only to model; inactive lifecycle has no persisted side effects", async () => {
+  const tools: any[] = []; const handlers = new Map<string, Function>(); const commands = new Map<string, any>(); const appended: unknown[] = []; const notices: string[] = [];
+  extension({ registerTool: (t: any) => tools.push(t), registerCommand: (n: string, c: any) => commands.set(n, c), on: (n: string, f: Function) => handlers.set(n, f), appendEntry: (...args: unknown[]) => appended.push(args) } as unknown as ExtensionAPI);
+  assert.deepEqual(tools.map(t => t.name), ["workflow_demo_propose"]);
+  assert.deepEqual([...commands.keys()], ["workflow-demo"]);
+  const context = { cwd: "/nonexistent", hasUI: false, sessionManager: { getBranch: () => [], getSessionFile: () => undefined }, ui: { notify: (s: string) => notices.push(s), setStatus: () => {} } };
+  handlers.get("session_start")!({}, context);
+  await commands.get("workflow-demo").handler("status", context);
+  assert.match(notices.at(-1)!, /inactive/);
+  await commands.get("workflow-demo").handler("propose Check", context);
+  assert.match(notices.at(-1)!, /prepared demo session/);
+  await commands.get("workflow-demo").handler("confirm", context);
+  assert.match(notices.at(-1)!, /operator UI/);
+  handlers.get("session_tree")!({}, context); handlers.get("session_shutdown")!({}, context);
+  assert.equal(appended.length, 0);
+  const abort = new AbortController(); abort.abort();
+  await assert.rejects(tools[0].execute("1", { objective: "Check" }, abort.signal, undefined, context), /cancelled/);
+});

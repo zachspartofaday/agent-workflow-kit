@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="800" viewBox="0 0 1440 800" role="img" aria-labelledby="title desc">
+  <title id="title">Turn a selected rule into a tested mechanism</title>
+  <desc id="desc">Automate what can be checked deterministically. Keep the remaining judgment explicit.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0 0 L8 4 L0 8" fill="none" stroke="#007e83" stroke-width="1.5" />
+    </marker>
+  </defs>
+  <rect width="1440" height="800" fill="#f3f6fb" />
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="64" y="66" font-size="38" fill="#172942" font-weight="700">Turn a selected rule into a tested mechanism</text>
+    <text x="64" y="106" font-size="22" fill="#52627a" font-weight="400">Automate what can be checked deterministically. Keep the remaining judgment explicit.</text>
+    <rect x="64" y="175" width="416" height="210" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="64" y="193" width="5" height="174" rx="2" fill="#007e83" />
+    <text x="88" y="205" font-size="15" fill="#007e83" font-weight="700">01 / RULE</text>
+    <text x="88" y="239" font-size="25" fill="#172942" font-weight="700">“Check current inputs”</text>
+    <text x="88" y="273" font-size="20" fill="#52627a" font-weight="400">A useful instruction</text>
+    <text x="88" y="302" font-size="20" fill="#52627a" font-weight="400">A stale result still looks green</text>
+    <polyline points="480,280 504,280" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
+    <rect x="512" y="175" width="416" height="210" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="512" y="193" width="5" height="174" rx="2" fill="#007e83" />
+    <text x="536" y="205" font-size="15" fill="#007e83" font-weight="700">02 / MECHANISM</text>
+    <text x="536" y="239" font-size="25" fill="#172942" font-weight="700">Bind the observation</text>
+    <text x="536" y="273" font-size="20" fill="#52627a" font-weight="400">Plan + commit + input digest</text>
+    <text x="536" y="302" font-size="20" fill="#52627a" font-weight="400">Record the actual attempt</text>
+    <polyline points="928,280 952,280" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
+    <rect x="960" y="175" width="416" height="210" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="960" y="193" width="5" height="174" rx="2" fill="#007e83" />
+    <text x="984" y="205" font-size="15" fill="#007e83" font-weight="700">03 / TEST</text>
+    <text x="984" y="239" font-size="25" fill="#172942" font-weight="700">Change the inputs</text>
+    <text x="984" y="273" font-size="20" fill="#52627a" font-weight="400">The old result cannot close</text>
+    <text x="984" y="302" font-size="20" fill="#52627a" font-weight="400">Show the next clearing action</text>
+    <rect x="64" y="455" width="640" height="255" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="64" y="473" width="5" height="219" rx="2" fill="#007e83" />
+    <text x="88" y="485" font-size="15" fill="#007e83" font-weight="700">TEACHING EXAMPLE</text>
+    <text x="88" y="519" font-size="25" fill="#172942" font-weight="700">Propose → confirm → check → close</text>
+    <text x="88" y="553" font-size="20" fill="#52627a" font-weight="400">Model proposes; operator confirms</text>
+    <text x="88" y="582" font-size="20" fill="#52627a" font-weight="400">One fixed fixture check; no arbitrary shell</text>
+    <text x="88" y="611" font-size="20" fill="#52627a" font-weight="400">Changed inputs or failed result block completion</text>
+    <text x="88" y="640" font-size="20" fill="#52627a" font-weight="400">Versioned events restore the selected session</text>
+    <rect x="736" y="455" width="640" height="255" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="736" y="473" width="5" height="219" rx="2" fill="#6554c0" />
+    <text x="760" y="485" font-size="15" fill="#6554c0" font-weight="700">LATER EXERCISES</text>
+    <text x="760" y="519" font-size="25" fill="#172942" font-weight="700">Build only what your workflow needs</text>
+    <text x="760" y="553" font-size="20" fill="#52627a" font-weight="400">Workspace ownership and worker supervision</text>
+    <text x="760" y="582" font-size="20" fill="#52627a" font-weight="400">Command execution and validation scheduling</text>
+    <text x="760" y="611" font-size="20" fill="#52627a" font-weight="400">Review watching and bounded continuation</text>
+    <text x="760" y="640" font-size="20" fill="#52627a" font-weight="400">Attempt history and strategy checkpoints</text>
+    <text x="64" y="772" font-size="14" fill="#52627a" font-weight="400">AGENT WORKFLOW KIT  /  Original teaching diagrams  /  MIT</text>
+  </g>
+</svg>

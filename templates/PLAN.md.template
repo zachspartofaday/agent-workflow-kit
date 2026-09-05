@@ -1,0 +1,23 @@
+# [Outcome]
+
+## Goal and acceptance
+
+[Observable user outcome, exclusions and evidence of success.]
+
+## Current evidence
+
+[Baseline/source identity, confirmed facts, assumptions and gaps.]
+
+## Delivery order
+
+| Deliverable | Owner | Prerequisites | Verification reference |
+| --- | --- | --- | --- |
+| [Coherent outcome] | [Repository/task] | [Actual dependencies] | [Canonical owner] |
+
+## Decisions and recovery
+
+[Material choices, compatibility/data boundaries, applicable authorization and rollback.]
+
+## Integration
+
+[Combined acceptance and manual observations, where relevant.]

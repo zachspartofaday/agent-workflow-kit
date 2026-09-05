@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="860" viewBox="0 0 1440 860" role="img" aria-labelledby="title desc">
+  <title id="title">Separate responsibilities, then test the boundaries</title>
+  <desc id="desc">A proposed architecture for your extension—not a claim that every runtime is host-neutral.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0 0 L8 4 L0 8" fill="none" stroke="#007e83" stroke-width="1.5" />
+    </marker>
+  </defs>
+  <rect width="1440" height="860" fill="#f3f6fb" />
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="64" y="66" font-size="38" fill="#172942" font-weight="700">Separate responsibilities, then test the boundaries</text>
+    <text x="64" y="106" font-size="22" fill="#52627a" font-weight="400">A proposed architecture for your extension—not a claim that every runtime is host-neutral.</text>
+    <rect x="64" y="160" width="400" height="175" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="64" y="178" width="5" height="139" rx="2" fill="#6554c0" />
+    <text x="88" y="190" font-size="15" fill="#6554c0" font-weight="700">01 / KNOWLEDGE</text>
+    <text x="88" y="224" font-size="25" fill="#172942" font-weight="700">Docs and skills</text>
+    <text x="88" y="258" font-size="20" fill="#52627a" font-weight="400">Requirements and local rules</text>
+    <text x="88" y="287" font-size="20" fill="#52627a" font-weight="400">Planning and review judgment</text>
+    <text x="88" y="316" font-size="20" fill="#52627a" font-weight="400">Usable without an extension</text>
+    <rect x="520" y="160" width="400" height="175" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="520" y="178" width="5" height="139" rx="2" fill="#007e83" />
+    <text x="544" y="190" font-size="15" fill="#007e83" font-weight="700">02 / MECHANISMS</text>
+    <text x="544" y="224" font-size="25" fill="#172942" font-weight="700">Workflow core</text>
+    <text x="544" y="258" font-size="20" fill="#52627a" font-weight="400">Plans, decisions and evidence</text>
+    <text x="544" y="287" font-size="20" fill="#52627a" font-weight="400">Transitions and freshness checks</text>
+    <text x="544" y="316" font-size="20" fill="#52627a" font-weight="400">Pure rules; explicit I/O ports</text>
+    <rect x="976" y="160" width="400" height="175" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="976" y="178" width="5" height="139" rx="2" fill="#6554c0" />
+    <text x="1000" y="190" font-size="15" fill="#6554c0" font-weight="700">03 / HOST</text>
+    <text x="1000" y="224" font-size="25" fill="#172942" font-weight="700">Pi integration</text>
+    <text x="1000" y="258" font-size="20" fill="#52627a" font-weight="400">Commands and model tools</text>
+    <text x="1000" y="287" font-size="20" fill="#52627a" font-weight="400">Sessions, events and UI</text>
+    <text x="1000" y="316" font-size="20" fill="#52627a" font-weight="400">Persistence and lifecycle</text>
+    <polyline points="464,245 510,245" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
+    <polyline points="920,245 966,245" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
+    <text x="64" y="402" font-size="29" fill="#172942" font-weight="700">Who is allowed to create which fact?</text>
+    <rect x="64" y="442" width="416" height="150" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="64" y="460" width="5" height="114" rx="2" fill="#007e83" />
+    <text x="88" y="472" font-size="15" fill="#007e83" font-weight="700">MODEL TOOL</text>
+    <text x="88" y="506" font-size="25" fill="#172942" font-weight="700">Proposes a plan</text>
+    <text x="88" y="540" font-size="20" fill="#52627a" font-weight="400">A proposal is not approval.</text>
+    <rect x="512" y="442" width="416" height="150" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="512" y="460" width="5" height="114" rx="2" fill="#007e83" />
+    <text x="536" y="472" font-size="15" fill="#007e83" font-weight="700">OPERATOR COMMAND</text>
+    <text x="536" y="506" font-size="25" fill="#172942" font-weight="700">Records a decision</text>
+    <text x="536" y="540" font-size="20" fill="#52627a" font-weight="400">Bind it to the exact plan.</text>
+    <rect x="960" y="442" width="416" height="150" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="960" y="460" width="5" height="114" rx="2" fill="#007e83" />
+    <text x="984" y="472" font-size="15" fill="#007e83" font-weight="700">CHECK CONTROLLER</text>
+    <text x="984" y="506" font-size="25" fill="#172942" font-weight="700">Records a result</text>
+    <text x="984" y="540" font-size="20" fill="#52627a" font-weight="400">Observe the actual execution.</text>
+    <rect x="64" y="644" width="1312" height="134" rx="18" fill="#e9e5f8" />
+    <text x="90" y="684" font-size="26" fill="#6554c0" font-weight="700">A useful separation to design toward</text>
+    <text x="90" y="720" font-size="20" fill="#52627a" font-weight="400">An existing Pi runtime may be deeply coupled to host sessions, RPC and lifecycle semantics.</text>
+    <text x="90" y="749" font-size="20" fill="#52627a" font-weight="400">Extraction requires an ownership and recovery audit; modular files alone do not establish portability.</text>
+    <text x="64" y="832" font-size="14" fill="#52627a" font-weight="400">AGENT WORKFLOW KIT  /  Original teaching diagrams  /  MIT</text>
+  </g>
+</svg>

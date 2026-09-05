@@ -1,0 +1,17 @@
+# [Task outcome]
+
+## Delivered or stopped
+
+[Compare accepted scope with observed outcome. Bind merge claims to actual merge evidence.]
+
+## Evidence
+
+[Candidate, commands/results, review outcome and manual observations. Separate historical/stale results.]
+
+## Remaining work
+
+[Descoped/deferred/unresolved acceptance, decisions, blockers and clearing actions.]
+
+## Boundaries and state
+
+[Compatibility/data boundaries, outward rollback, dirty/committed/pushed/merged state and retained artifacts. Inventory is not cleanup permission.]

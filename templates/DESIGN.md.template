@@ -1,0 +1,17 @@
+# [Focused design decision]
+
+## Problem and evidence
+
+[Observed constraint or unmet outcome.]
+
+## Options and decision
+
+[Meaningful alternatives, chosen approach and evidence/assumptions. Leave unresolved choices explicit.]
+
+## Interfaces and ownership
+
+[Inputs, outputs, source of truth, failure behavior and compatibility.]
+
+## Verification and rollout
+
+[Behavioral tests, integration/manual evidence and rollback.]

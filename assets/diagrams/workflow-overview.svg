@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="860" viewBox="0 0 1440 860" role="img" aria-labelledby="title desc">
+  <title id="title">From a written process to an executable workflow</title>
+  <desc id="desc">Keep intent, source state and evidence connected across every iteration.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0 0 L8 4 L0 8" fill="none" stroke="#007e83" stroke-width="1.5" />
+    </marker>
+  </defs>
+  <rect width="1440" height="860" fill="#f3f6fb" />
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="64" y="66" font-size="38" fill="#172942" font-weight="700">From a written process to an executable workflow</text>
+    <text x="64" y="106" font-size="22" fill="#52627a" font-weight="400">Shared intent, knowledge and skills guide every stage; evidence keeps each iteration grounded.</text>
+    <rect x="64" y="155" width="416" height="145" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="64" y="173" width="5" height="109" rx="2" fill="#6554c0" />
+    <text x="88" y="185" font-size="15" fill="#6554c0" font-weight="700">DIRECTION</text>
+    <text x="88" y="219" font-size="25" fill="#172942" font-weight="700">Operator intent</text>
+    <text x="88" y="253" font-size="20" fill="#52627a" font-weight="400">Outcome, boundaries, decisions</text>
+    <rect x="512" y="155" width="416" height="145" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="512" y="173" width="5" height="109" rx="2" fill="#007e83" />
+    <text x="536" y="185" font-size="15" fill="#007e83" font-weight="700">KNOWLEDGE</text>
+    <text x="536" y="219" font-size="25" fill="#172942" font-weight="700">Repository docs</text>
+    <text x="536" y="253" font-size="20" fill="#52627a" font-weight="400">Rules, commands, current work</text>
+    <rect x="960" y="155" width="416" height="145" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="960" y="173" width="5" height="109" rx="2" fill="#6554c0" />
+    <text x="984" y="185" font-size="15" fill="#6554c0" font-weight="700">JUDGMENT</text>
+    <text x="984" y="219" font-size="25" fill="#172942" font-weight="700">Portable skills</text>
+    <text x="984" y="253" font-size="20" fill="#52627a" font-weight="400">Plan, diagnose, review, hand off</text>
+    <rect x="64" y="355" width="240" height="125" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="64" y="373" width="5" height="89" rx="2" fill="#007e83" />
+    <text x="88" y="385" font-size="15" fill="#007e83" font-weight="700">01</text>
+    <text x="88" y="419" font-size="25" fill="#172942" font-weight="700">Inspect</text>
+    <text x="88" y="453" font-size="20" fill="#52627a" font-weight="400">Read the baseline</text>
+    <polyline points="304,417 325,417" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
+    <rect x="332" y="355" width="240" height="125" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="332" y="373" width="5" height="89" rx="2" fill="#007e83" />
+    <text x="356" y="385" font-size="15" fill="#007e83" font-weight="700">02</text>
+    <text x="356" y="419" font-size="25" fill="#172942" font-weight="700">Plan</text>
+    <text x="356" y="453" font-size="20" fill="#52627a" font-weight="400">Set scope and checks</text>
+    <polyline points="572,417 593,417" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
+    <rect x="600" y="355" width="240" height="125" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="600" y="373" width="5" height="89" rx="2" fill="#007e83" />
+    <text x="624" y="385" font-size="15" fill="#007e83" font-weight="700">03</text>
+    <text x="624" y="419" font-size="25" fill="#172942" font-weight="700">Implement</text>
+    <text x="624" y="453" font-size="20" fill="#52627a" font-weight="400">Make the change</text>
+    <polyline points="840,417 861,417" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
+    <rect x="868" y="355" width="240" height="125" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="868" y="373" width="5" height="89" rx="2" fill="#007e83" />
+    <text x="892" y="385" font-size="15" fill="#007e83" font-weight="700">04</text>
+    <text x="892" y="419" font-size="25" fill="#172942" font-weight="700">Validate</text>
+    <text x="892" y="453" font-size="20" fill="#52627a" font-weight="400">Observe the result</text>
+    <polyline points="1108,417 1129,417" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
+    <rect x="1136" y="355" width="240" height="125" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="1136" y="373" width="5" height="89" rx="2" fill="#007e83" />
+    <text x="1160" y="385" font-size="15" fill="#007e83" font-weight="700">05</text>
+    <text x="1160" y="419" font-size="25" fill="#172942" font-weight="700">Review</text>
+    <text x="1160" y="453" font-size="20" fill="#52627a" font-weight="400">Assess the candidate</text>
+    <polyline points="1256,480 1256,535 720,535 720,490" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
+    <text x="780" y="568" font-size="21" fill="#007e83" font-weight="700">Failure or findings → diagnose → revise</text>
+    <rect x="64" y="610" width="640" height="165" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="64" y="628" width="5" height="129" rx="2" fill="#007e83" />
+    <text x="88" y="640" font-size="15" fill="#007e83" font-weight="700">RUNTIME MECHANISMS</text>
+    <text x="88" y="674" font-size="25" fill="#172942" font-weight="700">Maintain state; enforce selected rules</text>
+    <text x="88" y="708" font-size="20" fill="#52627a" font-weight="400">Bind evidence • wait on events • retain attempts</text>
+    <text x="88" y="737" font-size="20" fill="#52627a" font-weight="400">Stop at missing decisions and unresolved blockers</text>
+    <rect x="736" y="610" width="640" height="165" rx="18" fill="white" stroke="#d4deea" stroke-width="2" />
+    <rect x="736" y="628" width="5" height="129" rx="2" fill="#6554c0" />
+    <text x="760" y="640" font-size="15" fill="#6554c0" font-weight="700">CLOSEOUT</text>
+    <text x="760" y="674" font-size="25" fill="#172942" font-weight="700">Explain what is actually complete</text>
+    <text x="760" y="708" font-size="20" fill="#52627a" font-weight="400">Current results, gaps and the next action</text>
+    <text x="760" y="737" font-size="20" fill="#52627a" font-weight="400">Merge, release and cleanup keep their own authority</text>
+    <text x="64" y="832" font-size="14" fill="#52627a" font-weight="400">AGENT WORKFLOW KIT  /  Original teaching diagrams  /  MIT</text>
+    <polyline points="1316,480 1316,600" fill="none" stroke="#007e83" stroke-width="3" marker-end="url(#arrow)" />
+    <polyline points="272,300 272,322" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" />
+    <polyline points="720,300 720,322" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" />
+    <polyline points="1168,300 1168,322" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" />
+    <polyline points="184,322 1256,322" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" />
+    <polyline points="184,322 184,346" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
+    <polyline points="988,480 988,535" fill="none" stroke="#007e83" stroke-width="3" stroke-linejoin="round" />
+    <text x="1328" y="567" font-size="16" fill="#007e83" font-weight="700">Ready</text>
+    <polyline points="452,322 452,346" fill="none" stroke="#007e83" stroke-width="3" marker-end="url(#arrow)" />
+    <polyline points="720,322 720,346" fill="none" stroke="#007e83" stroke-width="3" marker-end="url(#arrow)" />
+    <polyline points="988,322 988,346" fill="none" stroke="#007e83" stroke-width="3" marker-end="url(#arrow)" />
+    <polyline points="1256,322 1256,346" fill="none" stroke="#007e83" stroke-width="3" marker-end="url(#arrow)" />
+  </g>
+</svg>
